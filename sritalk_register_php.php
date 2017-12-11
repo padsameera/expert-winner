@@ -5,7 +5,7 @@
     $RegisterUserName = $_POST["RegisterUserName"];
     $RegisterPassword = $_POST["RegisterPassword"];
     $RegisterAge = $_POST["RegisterAge"];
-    $statement = mysqli_prepare($con, "INSERT INTO user (RegisterName, RegisterUserName, RegisterPassword, RegisterAge) VALUES (?, ?, ?, ?)");
+    $statement = mysqli_prepare($con, "INSERT INTO userlogin (RegisterName, RegisterUserName, RegisterPassword, RegisterAge) VALUES (?, ?, ?, ?)");
     mysqli_stmt_bind_param($statement, "siss", $RegisterName, $RegisterUserName, $RegisterPassword, $RegisterAge);
     mysqli_stmt_execute($statement);
     
