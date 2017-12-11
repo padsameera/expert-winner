@@ -4,7 +4,7 @@
     $RegisterUserName = $_POST["RegisterUserName"];
     $RegisterPassword = $_POST["RegisterPassword"];
     
-    $statement = mysqli_prepare($con, "SELECT * FROM user WHERE RegisterUserName = ? AND RegisterPassword = ?");
+    $statement = mysqli_prepare($con, "SELECT * FROM userlogin WHERE RegisterUserName = ? AND RegisterPassword = ?");
     mysqli_stmt_bind_param($statement, "ss", $RegisterUserName, $RegisterPassword);
     mysqli_stmt_execute($statement);
     
